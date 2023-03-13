@@ -1,16 +1,42 @@
-import random
+import random 
 
-#Definerar en funktion
-def print_fruit(userInput):
-    fnr = int(userInput)
-    print('\n' + frukten [fnr - 1] + ' kommer här!')
 
-frukten =('Banan', 'Apelsin', 'Äpple', 'Päron', 'Kiwi')
+def print_fruit(userinput):
+    fnr = int(userinput)
+    print("\n" + frukter[fnr-1] + " kommer här!")
+
+
+frukter =("Apelsin", "Mango", "Äpple", "Banan", "Päron", "Dragonfrukt", "Kiwi", "Persika", "Blåbär")
+
 looping = True
 
 while looping:
 
-    go = input('Vill du välja en frukt?')
+    print("================================================================")
+    print("\n FruktAutomat V0.2 \n")
+    print("================================================================")
 
-    if (go == 'n'):
+    i = 1
+
+    for frukt in frukter:
+        print(str(i) + ": " + frukt)
+        i += 1
+
+
+
+    fruktnr = input("\n Siffra --->:")
+    print_fruit(fruktnr)
+
+
+
+    go = input("\n Vill du välja en frukt till? j/n \n")
+
+    if (go == "n"):
         break
+
+
+print("================================================================")
+
+print("Föresten här får du en till frukt")
+slumpfrukt = random.randint(0, 5)
+print_fruit(slumpfrukt)
